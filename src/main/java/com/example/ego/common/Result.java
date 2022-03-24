@@ -1,5 +1,10 @@
 package com.example.ego.common;
 
+/**
+ * @Author: Xuuxxi
+ * @Date: 2022/3/24
+ */
+
 public class Result<T> {
     private String code;
     private String msg;

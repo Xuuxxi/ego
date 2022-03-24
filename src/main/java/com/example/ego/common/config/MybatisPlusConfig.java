@@ -1,5 +1,10 @@
 package com.example.ego.common.config;
 
+/**
+ * @Author: Xuuxxi
+ * @Date: 2022/3/24
+ */
+
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;

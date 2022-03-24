@@ -1,4 +1,10 @@
 package com.example.ego.common.config;//package com.example.demo.common.config;
+
+/**
+ * @Author: Xuuxxi
+ * @Date: 2022/3/24
+ */
+
 //
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
