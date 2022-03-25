@@ -10,11 +10,20 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.util.List;
+
 @TableName("user")
 @Data
 public class User {
-@TableId(value = "id",type = IdType.AUTO)
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
-    private String username;
-    private String password;
+    private String username;    //登录名称
+    private String password;    //登录密码
+
+    private String url;     //头像url
+    private String address; //用户地址
+
+    private List<Good> favoriteProducts;    //喜欢的商品
+
+    private List<TransactionInfo> infos; //交易记录
 }
