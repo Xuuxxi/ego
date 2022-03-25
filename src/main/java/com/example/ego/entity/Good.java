@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 public class Good {
     @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    private Long id;
     private String name;
     private String price;
     private String url; //商品图片

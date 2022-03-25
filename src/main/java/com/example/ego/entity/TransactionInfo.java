@@ -13,7 +13,7 @@ import lombok.Data;
 @Data   //forUser
 public class TransactionInfo {
     @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     private boolean isSeller;   //是否为卖家
     private boolean type;   //卖则为 true

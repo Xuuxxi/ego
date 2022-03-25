@@ -13,6 +13,6 @@ import lombok.Data;
 @Data
 public class Seller {
     @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    private Long id;
     private String name;
 }

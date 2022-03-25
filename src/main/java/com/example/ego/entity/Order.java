@@ -16,7 +16,7 @@ import java.util.Date;
 @Data
 public class Order {
     @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    private Long id;
     @JsonFormat(pattern = "yyyy-MM-dd" ,timezone = "GMT+8")
     private Date date;  //订单创建时间，格式为 yyyy-MM-dd
 

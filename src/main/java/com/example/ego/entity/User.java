@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 public class User {
     @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    private Long id;
     private String username;    //登录名称
     private String password;    //登录密码
 
