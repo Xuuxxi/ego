@@ -24,7 +24,7 @@ public class Good {
 
     private Seller seller;
     private String sellerName = seller.getName();   //卖家信息
-    private List<Integer> buyerId;    //买家信息
+    private List<Integer> buyerId;    //买家信息    //非必要*****
 
     private List<Integer> subscriberId;  //收藏该商品的id
     private Boolean isStared;   //是否被喜欢，selectOne 使用

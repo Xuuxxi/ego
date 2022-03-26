@@ -2,7 +2,7 @@ package com.example.ego.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.ego.common.Result;
+import com.example.ego.common.util.Result;
 import com.example.ego.entity.Good;
 import com.example.ego.mapper.GoodMapper;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.sql.Wrapper;
 import java.util.List;
 
 /**

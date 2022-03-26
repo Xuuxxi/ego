@@ -6,7 +6,7 @@ package com.example.ego.controller;
  */
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.example.ego.common.Result;
+import com.example.ego.common.util.Result;
 import com.example.ego.entity.User;
 import com.example.ego.mapper.UserMapper;
 import org.springframework.web.bind.annotation.*;

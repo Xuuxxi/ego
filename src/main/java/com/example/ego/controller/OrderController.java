@@ -1,6 +1,6 @@
 package com.example.ego.controller;
 
-import com.example.ego.common.Result;
+import com.example.ego.common.util.Result;
 import com.example.ego.entity.Order;
 import com.example.ego.mapper.OrderMapper;
 import org.springframework.web.bind.annotation.GetMapping;

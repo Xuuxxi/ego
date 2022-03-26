@@ -1,4 +1,4 @@
-package com.example.ego.common;
+package com.example.ego.common.util;
 
 /**
  * @Author: Xuuxxi
