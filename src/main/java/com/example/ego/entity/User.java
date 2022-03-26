@@ -21,6 +21,7 @@ import java.util.List;
 public class User {
     @TableId(value = "id",type = IdType.AUTO)
     private Long id;
+    private Integer role;   //管理员 1，普通用户 2
     private String username;    //登录名称
     private String password;    //登录密码
 
