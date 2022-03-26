@@ -27,6 +27,7 @@ public class User {
 
     private String url;     //头像url
     private String address; //用户地址
+    private Boolean qualifiedSeller;    //合格卖家
 
     private List<Good> favoriteProducts;    //喜欢的商品
 

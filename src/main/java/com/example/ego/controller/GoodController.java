@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.ego.common.util.Result;
 import com.example.ego.entity.Good;
 import com.example.ego.mapper.GoodMapper;
+import com.example.ego.server.GoodServerImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,13 +23,13 @@ import java.util.List;
 @RequestMapping("/good")
 public class GoodController {
     @Resource
-    GoodMapper goodMapper;
+    GoodServerImpl goodServer;
 
     @GetMapping//按商品分类名获取,分页展示
     public Result<?> getGoodsList(@RequestParam(defaultValue = "1") Integer pageNum,    //页数
                                   @RequestParam(defaultValue = "10") Integer pageSize,  //每页数据大小
                                   @RequestParam(defaultValue = "") String category){
-        Page<Good> goods = goodMapper.selectPage(new Page<>(pageNum, pageSize), Wrappers.<Good>lambdaQuery().eq(Good::getCategory, category));
+        Page<Good> goods = goodServer.getGoodsList(pageNum,pageSize,category);
 
         if(goods == null) return Result.error("-1","不存在符合要求的商品");
 
@@ -38,7 +39,7 @@ public class GoodController {
 
     @GetMapping//根据商品名字和用户id获取
     public Result<?> getGood(String sellerName,Integer userId){
-        Good good = goodMapper.selectOne(Wrappers.<Good>lambdaQuery().eq(Good::getSellerName,sellerName));
+        Good good = goodServer.getGood(sellerName,userId);
         List<Integer> buyerId = good.getBuyerId();
 
         if(buyerId.contains(userId)) {
@@ -53,7 +54,7 @@ public class GoodController {
 
     @GetMapping//根据商品id和用户id获取
     public Result<?> getGood(Integer goodId,Integer userId){
-        Good good = goodMapper.selectOne(Wrappers.<Good>lambdaQuery().eq(Good::getId,goodId));
+        Good good = goodServer.getGood(goodId,userId);
         List<Integer> buyerId = good.getBuyerId();
 
         if(buyerId.contains(userId)) {

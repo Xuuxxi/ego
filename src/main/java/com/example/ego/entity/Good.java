@@ -33,5 +33,6 @@ public class Good {
     private List<Integer> buyerId;    //买家信息    //非必要*****
 
     private List<Integer> subscriberId;  //收藏该商品的id
-    private Boolean isStared;   //是否被喜欢，selectOne 使用
+    private Boolean isStared;   //是否被喜欢      //用户即role=2的时候查看
+    private Boolean isVerified; //审核是否通过    //管理员即role=1的时候查看
 }
