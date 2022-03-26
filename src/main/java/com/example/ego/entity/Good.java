@@ -24,7 +24,9 @@ public class Good {
     private String name;
     private String price;
     private String url; //商品图片
+    private List<String> infoUrl;   //具体内容图
     private String category;    //商品种类
+    private String info;    //商品介绍
 
     private Seller seller;
     private String sellerName = seller.getName();   //卖家信息

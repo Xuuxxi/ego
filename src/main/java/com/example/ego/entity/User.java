@@ -31,4 +31,9 @@ public class User {
     private List<Good> favoriteProducts;    //喜欢的商品
 
     private List<TransactionInfo> infos; //交易记录
+
+    //for test
+    public User(int i) {
+        this.role = i;
+    }
 }
